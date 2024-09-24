@@ -12,16 +12,15 @@ private:
 public:
 	ydar_wall()
 	{
-		message = "нельзя ходить через стены!";
+		message = "Г­ГҐГ«ГјГ§Гї ГµГ®Г¤ГЁГІГј Г·ГҐГ°ГҐГ§ Г±ГІГҐГ­Г»!";
 	}
-	ydar_wall(const string& message) : message{ message } {}		//конструктор класса ydar_wall
-	const char* what() const noexcept override		//объявление метода what(), который переопределяет виртуальную функцию из класса exception
+	ydar_wall(const string& message) : message{ message } {}		//ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЄГ«Г Г±Г±Г  ydar_wall
+	const char* what() const noexcept override		//Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ Г¬ГҐГІГ®Г¤Г  what(), ГЄГ®ГІГ®Г°Г»Г© ГЇГҐГ°ГҐГ®ГЇГ°ГҐГ¤ГҐГ«ГїГҐГІ ГўГЁГ°ГІГіГ Г«ГјГ­ГіГѕ ГґГіГ­ГЄГ¶ГЁГѕ ГЁГ§ ГЄГ«Г Г±Г±Г  exception
 	{
-		return message.c_str();		//возвращаемое значение метода what(). 
-									//возвращает указатель на строку (массив символов), содержащую сообщение об ошибке, доступное из message
+		return message.c_str();		//ГўГ®Г§ГўГ°Г Г№Г ГҐГ¬Г®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ Г¬ГҐГІГ®Г¤Г  what(). 
+									//ГўГ®Г§ГўГ°Г Г№Г ГҐГІ ГіГЄГ Г§Г ГІГҐГ«Гј Г­Г  Г±ГІГ°Г®ГЄГі (Г¬Г Г±Г±ГЁГў Г±ГЁГ¬ГўГ®Г«Г®Гў), Г±Г®Г¤ГҐГ°Г¦Г Г№ГіГѕ Г±Г®Г®ГЎГ№ГҐГ­ГЁГҐ Г®ГЎ Г®ГёГЁГЎГЄГҐ, Г¤Г®Г±ГІГіГЇГ­Г®ГҐ ГЁГ§ message
 	}
 };
-
 
 class lives_lost :exception
 {
@@ -31,7 +30,7 @@ private:
 public:
 	lives_lost()
 	{
-		message = "не осталось жизней!";
+		message = "Г­ГҐ Г®Г±ГІГ Г«Г®Г±Гј Г¦ГЁГ§Г­ГҐГ©!";
 	}
 
 	lives_lost(const string& message) : message{ message } {}		
@@ -50,7 +49,7 @@ private:
 public:
 	need_more_coins()
 	{
-		message = "соберите больше монет!";
+		message = "Г±Г®ГЎГҐГ°ГЁГІГҐ ГЎГ®Г«ГјГёГҐ Г¬Г®Г­ГҐГІ!";
 	}
 
 	need_more_coins(const string& message) : message{ message } {}		
@@ -61,7 +60,7 @@ public:
 };
 
 
-class need_more_hits :exception		//нужно больше ударов, чтобы убить монстра
+class need_more_hits :exception		//Г­ГіГ¦Г­Г® ГЎГ®Г«ГјГёГҐ ГіГ¤Г Г°Г®Гў, Г·ГІГ®ГЎГ» ГіГЎГЁГІГј Г¬Г®Г­Г±ГІГ°Г 
 {
 private:
 	string message;
@@ -69,7 +68,7 @@ private:
 public:
 	need_more_hits()
 	{
-		message = "сделайте больше ударов, чтобы убить монстра!";
+		message = "Г±Г¤ГҐГ«Г Г©ГІГҐ ГЎГ®Г«ГјГёГҐ ГіГ¤Г Г°Г®Гў, Г·ГІГ®ГЎГ» ГіГЎГЁГІГј Г¬Г®Г­Г±ГІГ°Г !";
 	}
 
 	need_more_hits(const string& message) : message{ message } {}
