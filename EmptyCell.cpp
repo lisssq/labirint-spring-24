@@ -21,3 +21,4 @@ void EmptyCell::visit(ostream& out) const
 {
 	out << ".";
 }
+

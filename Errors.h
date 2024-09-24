@@ -22,6 +22,7 @@ public:
 	}
 };
 
+
 class lives_lost :exception
 {
 private:
